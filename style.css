@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    /*FONTS*/
+    --FF : "Roboto", sans-serif;
+    --FS : 16px;
+    --FW-400: 400;
+    --FW-700: 700;
+
+    /*COLORS -PRIMARY*/
+    --Red: hsl(4, 100%, 67%);
+
+    /*COLORS -NEUTRAL*/
+    --Blue-800: hsl(234, 29%, 20%);
+    --Blue-700: hsl(235, 18%, 26%);
+    --Grey: hsl(0, 0%,58%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    font-family: var(--FF);
+    font-size: var(--FS);
+    font-weight: var(--FW-400);
+    background-color: var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+figure{
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section{
+    margin-bottom: 2rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-section img{
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
+}
+
+.main-section{
+    margin: 1rem;
+    padding: 2rem;
+}
+
+.main-section h1{
+    margin-bottom: 1rem;
+}
+.main-section p{
+    margin-bottom: 1.5rem;
+}
+
+.features-list{
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.features-list li{
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 1rem;
+}
+
+.email-section{
+    margin-top: 2rem;
+}
+
+.email-section label{
+    display: block;
+    font-size: 10px;
+    margin-bottom: 1rem;
+    font-weight: var(--FW-700);
+}
+
+.email-section input{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--Grey);
+    border-radius: 5px;
+    font-size: var(--FS);
+    margin-bottom: 1rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--Blue-800);
+    color: var(--White);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: var(--FS);
+    font-weight: var(--FW-700);
+}
+
+.submit-btn:active{
+    background-color: var(--Red);
+}
+

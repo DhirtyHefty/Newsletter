@@ -4,20 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Newsletter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <figure>
-        <img src="images/illustration-sign-up-mobile.svg" alt="sign up illustration">
-    </figure>
-    <h1>Stay updated!</h1>
-    <p>Join 60,000+ product managers receiving monthly updates on:</p>
-    <ul>
-        <li> <img src="images/icon-list.svg" alt="List Icon">Product discovery and building what matters</li>
-        <li> <img src="images/icon-list.svg" alt="List Icon">Measuring to ensure updates are a success</li>
-        <li> <img src="images/icon-list.svg" alt="List Icon">And much more</li>
-    </ul>
-    <form action="#" method="post">
-        <input type="email" placeholder="Enter your email address" required>
-        <button type="submit">Subscribe to monthly newsletter</button>
+    <main>
+        <div class="hero-section">
+             <figure>
+                <img src="images/illustration-sign-up-mobile.svg"   alt="sign up illustration">
+            </figure>
+        </div>
+        <div class="main-section">
+            <h1>Stay updated!</h1>
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+            <ul class="features-list">
+                <li> <img src="images/icon-list.svg" alt="List Icon">Product discovery and building what matters</li>
+                <li> <img src="images/icon-list.svg" alt="List Icon">Measuring to ensure updates are a success</li>
+                <li> <img src="images/icon-list.svg" alt="List Icon">And much more</li>
+            </ul>
+
+            <form class="newsletter-form" id="newsletterForm">
+                <div class="email-section">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="@emailcompany.com" required>
+                    <button type="submit" class="submit-btn">Subscribe to monthly Newsletter</button>
+                </div>
+            </form>
+        </div>
+    </main>
 </body>
 </html>
