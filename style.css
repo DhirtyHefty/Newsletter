@@ -105,6 +105,11 @@ figure{
     cursor: pointer;
     font-size: var(--FS);
     font-weight: var(--FW-700);
+    transition: background-color  0.2s;
+}
+
+.submit-btn:hover{
+    background-color: var(--Red);
 }
 
 .submit-btn:active{
