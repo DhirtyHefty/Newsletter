@@ -8,18 +8,24 @@ document.addEventListener('DOMContentLoaded', function() {
     //add event listener to form
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        console.log('Form submitted');
 
         //get email value
         const email = emailInputField.value
-        console.log('email entered:', email)
 
         //validate email
         if(emailInputField.validity.valid){
-            console.log('Email is valid');
-        }else{
+            console.log('Email entered:', email)
+            //show the users email in the success section
+            userEmail.textContent = email
+
+            //hide the container
+            main-container.classlist.add('hide')
+
+            //show success message
+            successMessage.classlist.add('show');
+        } else {
             console.log('Email is invalid')
-            alert('Please enter a valid email')
+            alert('Enter a valid email')
         }
     });
 

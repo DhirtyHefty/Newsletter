@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
+    <main class="main-container">
         <div class="hero-section">
              <figure>
                 <img src="images/illustration-sign-up-mobile.svg"   alt="sign up illustration">
@@ -29,6 +29,22 @@
                     <button type="submit" class="submit-btn">Subscribe to monthly Newsletter</button>
                 </div>
             </form>
+        </div>
+
+        <!--Success Page-->
+        <div class="success-message" id="successMessage"> 
+            <div class="success-icon">
+                <img src="images/icon-success.svg" alt="Success Icon">
+            </div>
+            <h2 class="success-heading">
+                Thanks for subscribing!
+            </h2>
+            <p class="success-text">
+                A confirmation email has been sent to <span id="userEmail">sark@gmail.com.</span> Please open it and click the button inside to confirm your subscription
+            </p>
+            <button class="dismiss-btn" id="dismissButton">
+                Dismiss Message
+            </button>
         </div>
     </main>
     <script src="script.js"></script>
