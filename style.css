@@ -61,6 +61,7 @@ figure{
 
 .main-section h1{
     margin-bottom: 1rem;
+    color: var(--Blue-800);
 }
 .main-section p{
     margin-bottom: 1.5rem;
@@ -96,7 +97,7 @@ figure{
     border: 1px solid var(--Grey);
     border-radius: 5px;
     font-size: var(--FS);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .submit-btn {
@@ -172,4 +173,57 @@ figure{
 
 .main-container.hide{
     display: none;
+}
+
+/*DESKTOP VIEW*/
+@media (min-width: 768px) {
+    body{
+        background-color: var(--Blue-700);
+        min-height: 100vh;
+    }
+
+    #mainContainer {
+        display: flex;
+        flex-direction: row-reverse;
+        
+        background-color: var(--White);
+        width: 100%;
+        height: auto ;
+        max-width: 800px;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+
+    .hero-section{
+        flex: 1;
+    }
+    
+    .main-section{
+        flex: 1;
+    }
+
+    .hero-section img{
+        content: url(images/illustration-sign-up-desktop.svg);
+        border: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .success-message{
+        width: 300px;
+        background-color: var(--White);
+        border-radius: 20px ;
+        padding: 2rem;
+    }
+
+    .success-icon img{
+        width: 40px;
+    }
+
+    .dismiss-btn{
+        margin: 1rem auto;
+        
+    }
+    
+
 }

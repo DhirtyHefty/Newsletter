@@ -42,5 +42,17 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Email is invalid!');
             alert('Please enter a valid email address');
         }
+
+        //dismiss button 
+        dismissBtn.addEventListener('click', function() {
+            //hide success message
+            successMessage.classList.remove('show')
+
+            //show main container again
+            signupContainer.classList.remove('hide')
+
+            //clear the email input
+            emailInputField.value = '';
+        })
     });
 });
