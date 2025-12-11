@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="main-container">
+    <main id="mainContainer">
         <div class="hero-section">
              <figure>
-                <img src="images/illustration-sign-up-mobile.svg"   alt="sign up illustration">
+                <img src="images/illustration-sign-up-mobile.svg" alt="sign up illustration">
             </figure>
         </div>
         <div class="main-section">
@@ -30,23 +30,24 @@
                 </div>
             </form>
         </div>
-
-        <!--Success Page-->
-        <div class="success-message" id="successMessage"> 
-            <div class="success-icon">
-                <img src="images/icon-success.svg" alt="Success Icon">
-            </div>
-            <h2 class="success-heading">
-                Thanks for subscribing!
-            </h2>
-            <p class="success-text">
-                A confirmation email has been sent to <span id="userEmail">sark@gmail.com.</span> Please open it and click the button inside to confirm your subscription
-            </p>
-            <button class="dismiss-btn" id="dismissButton">
-                Dismiss Message
-            </button>
-        </div>
     </main>
+
+    <!--Success Page-->
+    <div class="success-message" id="successMessage">
+        <div class="success-icon">
+            <img src="images/icon-success.svg" alt="Success Icon">
+        </div>
+        <h2 class="success-heading">
+            Thanks for subscribing!
+        </h2>
+        <p class="success-text">
+            A confirmation email has been sent to <span id="userEmail">sark@gmail.com</span>. Please open it and click the button inside to confirm your subscription
+        </p>
+        <button class="dismiss-btn" id="dismissBtn">
+            Dismiss Message
+        </button>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

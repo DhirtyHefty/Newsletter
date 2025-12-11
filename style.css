@@ -50,6 +50,10 @@ figure{
     object-fit: cover;
 }
 
+#mainContainer.hide{
+    display: none;
+}
+
 .main-section{
     margin: 1rem;
     padding: 2rem;
@@ -120,6 +124,10 @@ figure{
 .success-message{
     display: none;
     padding: 40px 20px;
+}
+
+.success-message.show{
+    display: block !important;
 }
 
 .success-icon{
