@@ -22,10 +22,13 @@
                 <li> <img src="images/icon-list.svg" alt="List Icon">And much more</li>
             </ul>
 
-            <form class="newsletter-form" id="newsletterForm">
+            <form class="newsletter-form" id="newsletterForm" novalidate>
                 <div class="email-section">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="email@company.com" autocomplete="email" required>
+                    <div class="label-container">
+                        <label for="email" class="email-label">Email Address</label>
+                        <span class="error-message" id="errorMessage">Valid email required</span>
+                    </div>
+                    <input type="email" id="email" name="email" placeholder="email@company.com" autocomplete="email" class="email-input" required>
                     <button type="submit" class="submit-btn">Subscribe to monthly Newsletter</button>
                 </div>
             </form>

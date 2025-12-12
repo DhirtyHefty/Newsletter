@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const successMessage = document.getElementById('successMessage');
     const userEmailSpan = document.getElementById('userEmail');
     const signupContainer = document.getElementById('mainContainer');
+    const errorMessage = document.getElementById('errorMessage')
+    const emailLabel = document.querySelector('.email-label')
 
     // Check if elements are found
     console.log('Success message found:', successMessage);
@@ -39,20 +41,34 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Success message shown');
             
         } else {
-            console.log('Email is invalid!');
-            alert('Please enter a valid email address');
+            //invalid email - show error state
+            emailInputField.classList.add('error');
+            emailLabel.classList.add('error');
+            errorMessage.classList.add('show');
         }
+
+        //remove error state when user starts typing
+        emailInputField.addEventListener('input', function() {
+            if(emailInputField.classList.contains('error')){
+                emailInputField.classList.remove('error');
+                emailLabel.classList.remove('error');
+                errorMessage.classList.remove('show');
+            }
+        });
 
         //dismiss button 
         dismissBtn.addEventListener('click', function() {
             //hide success message
-            successMessage.classList.remove('show')
+            successMessage.classList.remove('show');
 
             //show main container again
-            signupContainer.classList.remove('hide')
+            signupContainer.classList.remove('hide');
 
-            //clear the email input
+            //clear the email input and any rror state
             emailInputField.value = '';
+            emailInputField.classList.remove('error');
+            emailLabel.classList.remove('erro');
+            errorMessage.classList.remove('show')
         })
     });
 });

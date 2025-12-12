@@ -86,7 +86,7 @@ figure{
 
 .email-section label{
     display: block;
-    font-size: 10px;
+    font-size: 12px;
     margin-bottom: 1rem;
     font-weight: var(--FW-700);
 }
@@ -94,10 +94,15 @@ figure{
 .email-section input{
     width: 100%;
     padding: 15px;
-    border: 1px solid var(--Grey);
-    border-radius: 5px;
+    border: 1px solid black;
+    border-radius: 7px;
     font-size: var(--FS);
     margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.email-section input:active{
+    border: 1px solid var(--Red);
 }
 
 .submit-btn {
@@ -111,7 +116,9 @@ figure{
     font-size: var(--FS);
     font-weight: var(--FW-700);
     transition: background-color  0.2s;
+    white-space: nowrap;
 }
+
 
 .submit-btn:hover{
     background-color: var(--Red);
@@ -175,6 +182,39 @@ figure{
     display: none;
 }
 
+.label-container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.error-message{
+    display: none;
+    font-size: 12px;
+    color: var(--Red);
+    font-weight: var(--FW-700);
+}
+
+.error-message.show{
+    display: block;
+}
+
+.email-input.error{
+    border-color: var(--Red) ;
+    background-color: hsl(2, 56%, 90%);
+    color: var(--Red);
+}
+
+.email.label.error{
+    color: var(--Red);
+}
+
+.email-input.error:focus{
+    border-color: var(--Red);
+    box-shadow: 0 0 0 3px rgb(255, 98, 87);
+}
+
+
 /*DESKTOP VIEW*/
 @media (min-width: 768px) {
     body{
@@ -190,7 +230,7 @@ figure{
         width: 100%;
         height: auto ;
         max-width: 800px;
-        border-radius: 10px;
+        border-radius: 20px;
         padding: 1rem;
     }
 
@@ -204,9 +244,6 @@ figure{
 
     .hero-section img{
         content: url(images/illustration-sign-up-desktop.svg);
-        border: none;
-        width: 100%;
-        height: 100%;
     }
 
     .success-message{
